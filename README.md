@@ -1,94 +1,104 @@
-Agroclimatic Clustering for Crop Yield Prediction 🌾📊
+# 🌾📊 Agroclimatic Clustering for Crop Yield Prediction
+
 This project aims to enhance crop yield prediction by segmenting regions into agroclimatic zones using machine learning and time series forecasting techniques. It integrates climatic and soil-based features to improve prediction accuracy and assist in smarter agricultural planning.
 
-📌 Project Objective
+---
+
+## 📌 Project Objective
+
 To predict crop yield more accurately by:
 
-Clustering regions based on similar agroclimatic conditions (climate + soil).
+- Clustering regions based on similar agroclimatic conditions (climate + soil).
+- Applying supervised ML and deep learning models within these clusters.
+- Leveraging historical climate and soil data from **Andhra Pradesh** and **Tamil Nadu** (2004–2021).
 
-Applying supervised ML and deep learning models within these clusters.
+---
 
-Leveraging historical climate and soil data from Andhra Pradesh and Tamil Nadu (2004–2021).
+## 📂 Dataset
 
-📂 Dataset
 The dataset includes:
 
-Climate data: temperature, rainfall, humidity, wind speed.
+- **Climate data:** temperature, rainfall, humidity, wind speed.  
+- **Soil data:** nitrogen (N), phosphorus (P), potassium (K), soil type.  
+- **Crop data:** crop name, production, area, yield, year, district, state.  
 
-Soil data: nitrogen (N), phosphorus (P), potassium (K), soil type.
+**Data Source:** Collected from public repositories and agriculture datasets available on GitHub and governmental portals.
 
-Crop data: crop name, production, area, yield, year, district, state.
+---
 
-Data Source:
-Collected from public repositories and agriculture datasets available on GitHub and governmental portals.
+## 🧹 Data Preprocessing
 
-🧹 Data Preprocessing
-Handled missing values.
+- Handled missing values  
+- Label encoded categorical features  
+- Normalized numerical variables  
+- Applied PCA for dimensionality reduction before clustering  
 
-Label encoded categorical features.
+---
 
-Normalized numerical variables.
+## 🧠 Methodology
 
-Applied PCA for dimensionality reduction before clustering.
+### Agroclimatic Clustering
 
-🧠 Methodology
-1. Agroclimatic Clustering
-Applied K-Means clustering to group similar climatic-soil regions.
+- Applied **K-Means** clustering to group similar climatic-soil regions.
 
-2. Crop Yield Prediction Models
-Random Forest
+### Crop Yield Prediction Models
 
-Gradient Boosting
+- **Random Forest**  
+- **Gradient Boosting**  
+- **XGBoost**  
+- **ARIMA (Time-Series)**  
+- **LSTM (Deep Learning)**  
 
-XGBoost
+> ⚡ Gradient Boosting showed the best performance among ML models.
 
-ARIMA (Time-Series)
+---
 
-LSTM (Deep Learning)
+## 📈 Results
 
-Gradient Boosting showed the best performance among ML models.
+- **Gradient Boosting** achieved the highest accuracy for crop yield prediction.
+- **LSTM** effectively captured temporal trends for future forecasting.
+- Visualized yield trends, cluster distributions, and feature importance.
 
-📈 Results
-Gradient Boosting achieved the highest accuracy for crop yield prediction.
+---
 
-LSTM effectively captured temporal trends for future forecasting.
+## 📊 Visualizations
 
-Visualized yield trends, cluster distributions, and feature importance.
+- Cluster maps of agroclimatic zones  
+- Year-wise and district-wise crop yield graphs  
+- Feature importance from models  
+- Performance metrics of all models  
 
-📊 Visualizations
-Cluster maps of agroclimatic zones.
+---
 
-Year-wise and district-wise crop yield graphs.
+## ✅ Key Takeaways
 
-Feature importance from models.
+- Clustering based on agroclimatic features significantly improves model performance.
+- Soil and climate variables are crucial for region-specific crop management.
+- Time-series models add robustness for dynamic forecasting.
 
-Performance metrics of all models.
+---
 
-✅ Key Takeaways
-Clustering based on agroclimatic features significantly improves model performance.
+## 🔮 Future Work
 
-Soil and climate variables are crucial for region-specific crop management.
+- Expand dataset to more states or entire India.
+- Incorporate real-time weather APIs for continuous prediction.
+- Explore AutoML frameworks for automated model tuning.
 
-Time-series models add robustness for dynamic forecasting.
+---
 
-🔮 Future Work
-Expand dataset to more states or entire India.
+## 💻 Technologies Used
 
-Incorporate real-time weather APIs for continuous prediction.
+- Python (Pandas, NumPy)  
+- Scikit-learn  
+- TensorFlow/Keras (for LSTM)  
+- Matplotlib, Seaborn  
+- Jupyter Notebook  
 
-Explore AutoML frameworks for automated model tuning.
+---
 
+## 🧑‍💻 Author
 
- 📊 Technologies Used
-
- Python (Pandas, NumPy)
- Scikit-learn
- TensorFlow/Keras (for LSTM)
- Matplotlib, Seaborn
- Jupyter Notebook
-
-🧑‍💻 Author
-Bandla Akkshitha
-M.Sc. Data Science, SASTRA Deemed University
-LinkedIn (https://www.linkedin.com/in/aab7311a7)  | 📧 [akkshi17@gmail.com]
-
+**Bandla Akkshitha**  
+M.Sc. Data Science, SASTRA Deemed University  
+📧 [akkshi17@gmail.com]  
+🔗 [LinkedIn](https://www.linkedin.com/in/aab7311a7)
