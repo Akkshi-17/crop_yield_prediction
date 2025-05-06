@@ -1,59 +1,94 @@
-# crop_yield_prediction
+Agroclimatic Clustering for Crop Yield Prediction 🌾📊
+This project aims to enhance crop yield prediction by segmenting regions into agroclimatic zones using machine learning and time series forecasting techniques. It integrates climatic and soil-based features to improve prediction accuracy and assist in smarter agricultural planning.
 
-# 🌾 Agroclimatic Clustering for Crop Yield Prediction
-This project focuses on enhancing the accuracy of crop yield prediction by clustering regions into agroclimatic zones based on climate, soil, and geographical characteristics. It combines unsupervised learning (K-Means) and supervised models (Random Forest,XGBOOST,Gradient Boost LSTM) for region-specific yield forecasting.
+📌 Project Objective
+To predict crop yield more accurately by:
 
-## 📌 Objective
+Clustering regions based on similar agroclimatic conditions (climate + soil).
 
-- Segment agricultural regions into distinct agroclimatic zones.
-- Improve crop yield prediction accuracy by using zone-specific models.
-- Provide actionable insights for localized agricultural planning and management.
+Applying supervised ML and deep learning models within these clusters.
 
-## 🧠 Problem Statement
+Leveraging historical climate and soil data from Andhra Pradesh and Tamil Nadu (2004–2021).
 
-Traditional crop yield prediction models often fail to account for region-specific variations in climate and soil. This project addresses the need for localized predictions by clustering regions into agroclimatic zones and building separate models for each zone.
+📂 Dataset
+The dataset includes:
+
+Climate data: temperature, rainfall, humidity, wind speed.
+
+Soil data: nitrogen (N), phosphorus (P), potassium (K), soil type.
+
+Crop data: crop name, production, area, yield, year, district, state.
+
+Data Source:
+Collected from public repositories and agriculture datasets available on GitHub and governmental portals.
+
+🧹 Data Preprocessing
+Handled missing values.
+
+Label encoded categorical features.
+
+Normalized numerical variables.
+
+Applied PCA for dimensionality reduction before clustering.
+
+🧠 Methodology
+1. Agroclimatic Clustering
+Applied K-Means clustering to group similar climatic-soil regions.
+
+2. Crop Yield Prediction Models
+Random Forest
+
+Gradient Boosting
+
+XGBoost
+
+ARIMA (Time-Series)
+
+LSTM (Deep Learning)
+
+Gradient Boosting showed the best performance among ML models.
+
+📈 Results
+Gradient Boosting achieved the highest accuracy for crop yield prediction.
+
+LSTM effectively captured temporal trends for future forecasting.
+
+Visualized yield trends, cluster distributions, and feature importance.
+
+📊 Visualizations
+Cluster maps of agroclimatic zones.
+
+Year-wise and district-wise crop yield graphs.
+
+Feature importance from models.
+
+Performance metrics of all models.
+
+✅ Key Takeaways
+Clustering based on agroclimatic features significantly improves model performance.
+
+Soil and climate variables are crucial for region-specific crop management.
+
+Time-series models add robustness for dynamic forecasting.
+
+🔮 Future Work
+Expand dataset to more states or entire India.
+
+Incorporate real-time weather APIs for continuous prediction.
+
+Explore AutoML frameworks for automated model tuning.
 
 
-## 🛠 Methodology
+ 📊 Technologies Used
 
-1. **Data Collection**  
-   - Collected multi-year data on temperature, humidity, rainfall, wind speed, and soil nutrients (N, P, K).
+ Python (Pandas, NumPy)
+ Scikit-learn
+ TensorFlow/Keras (for LSTM)
+ Matplotlib, Seaborn
+ Jupyter Notebook
 
-2. **Preprocessing**  
-   - Cleaned missing values  
-   - Scaled numerical features using StandardScaler  
-   - Encoded soil types  
-   - Merged and structured data for clustering and modeling
-
-3. **Agroclimatic Clustering**  
-   - Applied K-Means clustering on climate and soil features  
-   - Visualized zones using PCA
-
-4. **Crop Yield Prediction**  
-   - Built machine learning models like Random Forest, XGBoost, and CatBoost etc..,
-   - Implemented an LSTM model and ARIMA for time-series yield forecasting  
-   - Evaluated using R² and MSE metrics
-
-## 📊 Technologies Used
-
-- Python
-- Pandas, NumPy
-- Scikit-learn
-- TensorFlow / Keras
-- Matplotlib, Seaborn
-- Jupyter Notebook
-
-## 📈 Results & Inference
-
-- Clustering helped uncover distinct regional patterns in climate and soil.
-- Zone-specific yield prediction models performed better than generalized models.
-- ARIMA captured temporal trends effectively for time-series forecasting.
-
-## ✅ Key Takeaways
-
-- Agroclimatic clustering enhances model accuracy and interpretability.
-- Localized models are more practical for real-world farming decisions.
-- Combining unsupervised and supervised learning leads to better performance.
-
-
+🧑‍💻 Author
+Bandla Akkshitha
+M.Sc. Data Science, SASTRA Deemed University
+LinkedIn (https://www.linkedin.com/in/aab7311a7)  | 📧 [akkshi17@gmail.com]
 
